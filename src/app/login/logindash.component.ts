@@ -7,31 +7,29 @@ import { Component } from '@angular/core';
 })
 export class LogindashComponent {
     
-  Some:string="user";
+  Some:string="User";
 UserChangePanel(){
-this.Some='user';
-this.Some != "driver";
-this.Some != "vendor";
+this.Some='User';
+
 }
 DriverChangePanel(){
-this.Some='driver';
-this.Some != "user";
-this.Some != "vendor";
+this.Some='Driver';
+
+
 }
 
 VendorChangePanel(){
-this.Some='vendor';
-this.Some != "driver";
-this.Some != "user";
+this.Some='Vendor';
+
 }
 
 
 login(username, pass){
   
-    if(this.Some === "user"){
+    if(this.Some === "User"){
 alert(this.Some+""+username +""+pass);
     }
-if(this.Some === "driver"){
+if(this.Some === "Driver"){
 alert(this.Some);
     }
 if(this.Some === "vendor"){

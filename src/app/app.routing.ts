@@ -4,10 +4,14 @@ import {HomeComponent} from './home/home.component';
 import {ContactusComponent} from './contactus.component';
 import{LoginComponent} from './login/login.component';
 
-import {CartComponent} from './cart.component';
 import {GuestComponent} from './login/guest.component';
 import{LogindashComponent}from './login/logindash.component';
-import {FindresComponent} from './findres.component';
+
+
+import { ProductComponent } from './components/product/product.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { CartComponent } from './components/cart/cart.component';
+
 export const routes:Routes = [
      {
         path:'',
@@ -19,11 +23,16 @@ export const routes:Routes = [
         component: HomeComponent,
       
     },
-     {
-        path:'findres',
-        component: FindresComponent,
-      
-    },
+   
+     
+    {
+    path: 'product',
+    component: ProductComponent
+  },
+  {
+    path: 'detail/:id',
+    component: ProductDetailComponent
+  },
      {
           path:'cart',
         component:CartComponent, 
@@ -67,3 +76,4 @@ children:[
 ]
 
 export const routing:ModuleWithProviders = RouterModule.forRoot(routes);
+
